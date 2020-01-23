@@ -23,5 +23,8 @@ public class Task13 {
 
 
         System.out.println(letterJ+"\n"+letterA+"\n"+letterV+"\n"+letterA);
+        int a =10;
+        int x = a++ + a-- - --a;
+        System.out.println(x +" "+ a);
     }
 }

@@ -9,7 +9,10 @@ public class task45 {
             int multVer = 1;
             System.out.print("\n" + multHor + " | ");
             do{
-                System.out.print(multHor * multVer+ " ");
+                //System.out.print(multHor * multVer+ " ");
+                int num = multHor * multVer;
+                String spacer = num < 10?"  ":" ";
+                System.out.print(num+spacer);
             }while (++multVer <10);
         }while (++multHor <10);
     }

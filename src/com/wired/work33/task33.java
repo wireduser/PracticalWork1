@@ -5,7 +5,7 @@ public class task33 {
         int sum = 1000;
         double percD = 10.0;
         double percU = 7;
-        double cost = sum - sum * percD / 100 ;
+        double cost = sum - sum * percD / 100;
         cost += cost * percU / 100;
         System.out.println("cost =" + cost);
     }

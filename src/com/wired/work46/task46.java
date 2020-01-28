@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class task46 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("enter -> ");
+        System.out.print("Введи цифру -> ");
         int number = sc.nextInt();
         int summa = 0;
         do{

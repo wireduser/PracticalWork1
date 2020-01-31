@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class task55 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter test ->");
+        System.out.print("Enter text ->");
         String text = scanner.nextLine();
 
         int index = 0;

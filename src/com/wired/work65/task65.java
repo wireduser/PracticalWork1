@@ -15,29 +15,29 @@ public class task65 {
             String spaces ="";
             String numbers = "";
             String line = "";
-            int stair = 1;
+            int floor = 1;
             int countDigits;
             int digit;
             do {
-                while (spaces.length() < (height - stair )){
+                while (spaces.length() < (height - floor )){
                     spaces += " ";
                 }
-                countDigits = stair + stair -1;
+                countDigits = floor + floor - 1;
                 digit = 1;
                 do {
                     numbers += digit;
-                    if (countDigits > stair) digit++;
+                    if (countDigits > floor) digit++;
                     else digit --;
                     countDigits --;
                 }while (countDigits != 0 );
                 line += spaces + numbers +"\n";
-                stair++;
                 spaces = "";
                 numbers = "";
-            } while (stair <= height);
+                floor++;
+            } while (floor <= height);
 
             return line;
-        } else return "Nothing to build, he he...";
+        } else return "Nothing to build!";
 
     }
 }

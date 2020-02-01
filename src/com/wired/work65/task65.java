@@ -4,6 +4,7 @@ import org.omg.CORBA.WStringSeqHelper;
 
 public class task65 {
     public static void main(String[] args) {
+
         int floors = 0;
         while (floors < 11){
             System.out.println(printPyramid(floors));
@@ -12,26 +13,30 @@ public class task65 {
     }
     public static String printPyramid(int height){
         if (height > 0 & height < 10){
-            String spaces ="";
             String numbers = "";
             String line = "";
             int floor = 1;
             int countDigits;
+            int countSpaces;
+            int lengthLine;
             int digit;
             do {
-                while (spaces.length() < (height - floor )){
-                    spaces += " ";
-                }
+                countSpaces = height - floor;
                 countDigits = floor + floor - 1;
-                digit = 1;
+                lengthLine = 0;
+                digit = 0;
                 do {
-                    numbers += digit;
-                    if (countDigits > floor) digit++;
-                    else digit --;
-                    countDigits --;
-                }while (countDigits != 0 );
-                line += spaces + numbers +"\n";
-                spaces = "";
+
+                    if (lengthLine < countSpaces){
+                        numbers += " ";
+                    } else {
+                        if ((lengthLine-countSpaces) >= floor) digit--;
+                        else digit++;
+                        numbers += digit;
+                    }
+                    lengthLine ++;
+                } while (lengthLine < (countDigits+countSpaces) );
+                line += numbers +"\n";
                 numbers = "";
                 floor++;
             } while (floor <= height);

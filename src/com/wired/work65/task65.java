@@ -26,7 +26,6 @@ public class task65 {
                 lengthLine = 0;
                 digit = 0;
                 do {
-
                     if (lengthLine < countSpaces){
                         numbers += " ";
                     } else {

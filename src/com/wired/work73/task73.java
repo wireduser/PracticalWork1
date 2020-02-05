@@ -23,9 +23,9 @@ public class task73 {
     public static void drawArray (int[][] array){
         for ( int line[] : array){
             for (int digit : line){
-                System.out.print(digit+" ");
+                System.out.print(String.format("%3d",digit));
             }
-            System.out.println("");
+            System.out.println();
         }
     }
 }

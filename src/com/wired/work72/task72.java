@@ -4,10 +4,14 @@ import java.util.Arrays;
 
 public class task72 {
     public static void main(String[] args) {
-        int [] array = {1,2,3,4,5,6,77,0};
+        int [] array = null;
         System.out.println(sumOddElementsArray(array));
     }
     public static int sumOddElementsArray(int[] array){
+        if (array == null || array.length <= 1){
+            return -1;
+        }
+
         int result = 0;
         for (int digit : array) {
             if (digit <0) return -1;

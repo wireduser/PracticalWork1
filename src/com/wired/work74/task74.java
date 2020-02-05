@@ -12,19 +12,20 @@ public class task74 {
         System.out.println("new matrix ");
         printMatrix(matrx);
         transpositionMatrix(matrx);
-
+        System.out.println("transposed matrix");
+        printMatrix(matrx);
     }
 
     public static void transpositionMatrix(int[][] matrix){
-        int len = matrix.length;
-        int[][] tmpArray = new int [len][len];
-        for (int i =0 ;  i < len; i++) {
-            for (int j = 0; j < matrix[i].length; j++) {
-                tmpArray[i][j] = matrix[j][i];
+        int temp;
+
+        for (int i =0 ;  i < matrix.length; i++) {
+            for (int j = i ; j < matrix[i].length; j++) {
+                temp = matrix[i][j];
+                matrix[i][j] = matrix[j][i];
+                matrix[j][i] = temp;
             }
         }
-        System.out.println("transposed matrix ");
-        printMatrix(tmpArray);
     }
 
     public static int[][] createMatrix(int size){
@@ -39,7 +40,7 @@ public class task74 {
     public static void printMatrix(int[][] matrix){
         for ( int line[] : matrix){
             for (int digit : line){
-                System.out.print((digit<10? "  " : " ") + digit );
+                System.out.print(String.format("%3d",digit));
             }
             System.out.println();
         }

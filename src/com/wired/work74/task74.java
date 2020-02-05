@@ -12,18 +12,19 @@ public class task74 {
         System.out.println("new matrix ");
         printMatrix(matrx);
         transpositionMatrix(matrx);
-        System.out.println("transposed matrix ");
-        printMatrix(matrx);
+
     }
 
     public static void transpositionMatrix(int[][] matrix){
         int len = matrix.length;
-        int[][] tmpArray = Arrays.copyOf(matrix,len);
+        int[][] tmpArray = new int [len][len];
         for (int i =0 ;  i < len; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                matrix[i][j] = tmpArray[j][i];
+                tmpArray[i][j] = matrix[j][i];
             }
         }
+        System.out.println("transposed matrix ");
+        printMatrix(tmpArray);
     }
 
     public static int[][] createMatrix(int size){
